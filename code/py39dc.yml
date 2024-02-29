@@ -1,0 +1,57 @@
+name: py39dc
+channels:
+ - conda-forge
+dependencies:
+ - python=3.9.*
+ - numpy
+ - sqlalchemy
+ - matplotlib
+ - netcdf4
+ - cartopy
+ - cftime
+ - hdf4
+ - pandas
+ - xarray
+ - dask
+ - dask-jobqueue
+ - jupyter
+ - jupyterlab
+ - nodejs
+ - distributed>=2.0
+ - bokeh>=2.4.2
+ - pygraphviz
+ - h5py
+ - psutil
+ - arrow
+ - bottleneck
+ - coverage
+ - ipython
+ - lxml
+ - pytest
+ - pytz
+ - python-dateutil
+ - pyyaml
+ - oyaml
+ - scipy
+ - cmocean
+ - openpyxl
+ - f90nml
+ - gsw
+ - papermill
+ - scikit-learn
+ - tqdm
+ - astropy
+ - statsmodels
+ - pip
+ - pip:
+   - PyCO2SYS
+   - dask_labextension
+# conda env create --prefix /nbhome/Elise.Olson/anaconda3/envs/py39dc -f py39dc.yml
+# conda activate py39dc
+# jupyter labextension install dask-labextension
+# cd /home/Elise.Olson/OAPMSE/analysis/Tools
+# conda develop .
+# cd /nbhome/ebo/mocsy
+# conda develop .
+# # didn't work: pip install --user --editable /home/Elise.Olson/pythonStuff/Tools
+# python -m ipykernel install --user --name py39dc --display-name "Python (py39dc)"
