@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import scipy.optimize as scopt
-from Tools import commonfxns as cf, OAPBuoyData as OAP, evalfxns as ev, viz, diagsPP, conversions
+import commonfxns as cf, OAPBuoyData as OAP, evalfxns as ev, viz, diagsPP, conversions
 import netCDF4 as nc
 import cftime
 import datetime as dt
@@ -141,9 +141,9 @@ dispNameUnits={'phos':'Surface pH','phosC':'Surface pH','spco2':'Surface pCO$_2$
         'omega_c_0':'Surface $\Omega_c$',
         'omega_c_50':'50 m $\Omega_c$',}
 
-vproclist=['tos','sos','phos','phosC','talkos','spco2','dpco2','o2os','co2dryair','chlos','l10chlos',
-           'hplusos','omega_a_0','omega_a_P_0','omega_c_0','dissicos','AOUos','o2percos','apco2']
-vproclistM=['intpp','mesozoo_200','omega_a_50','omega_c_50','no3os'] # model only variables
+vproclist=['AOUos',]#['tos','sos','spco2','o2os','chlos',]#'phos','phosC','talkos','spco2','dpco2','o2os','co2dryair','chlos','l10chlos',
+           #'hplusos','omega_a_0','omega_a_P_0','omega_c_0','dissicos','AOUos','o2percos','apco2']
+vproclistM=[]#['intpp','mesozoo_200','omega_a_50','omega_c_50','no3os'] # model only variables
 # spco2: 1 atm = 101325 Pa; 1 μatm=0.101325 Pa; Pa*1/(0.101325)->μatm
 # chl: ug/l=mg/m3   kg/m3*1e6=mg/m3
 # DO: # mol/m3 -> umol/kg:
@@ -153,10 +153,11 @@ varUncert={'tos':0.01,'sos':0.05,'spco2':2,'apco2':1,'co2dryair':0.02,'dpco2':2.
             'phos':0.02,'phosC':np.nan,'chlos':0.013}
 
 HDgrid=False # default to false
-if 'stellar' in socket.gethostname():
-    savebase='/scratch/cimes/eo2651/calcs/buoyCompTS/'
-else:
-    savebase='/work/Elise.Olson/calcs/buoyCompTS/'
+# if 'stellar' in socket.gethostname():
+#     savebase='/scratch/cimes/eo2651/calcs/buoyCompTS/'
+# else:
+#     savebase='/work/Elise.Olson/calcs/buoyCompTS/'
+savebase='/space/hall5/sitestore/eccc/crd/ccrn/users/reo000/work/'
 figsaveloc=savebase+'figs/'
 compsaveloc=savebase+'comps/'
 
@@ -222,62 +223,42 @@ def modload(modvar,f1,f2,lon,lat,freq='daily'):
             modvar='phos' 
         if modvar in varMult.keys():
             # list of mod vars requiring only multiplication by constant
-            try:
-                mod_val=f1.variables[modvar][:,0,...]*varMult[modvar]
-            except:
-                mod_val=f2.variables[modvar][:,0,...]*varMult[modvar]
+            mod_val=f1.variables[modvar][:]*varMult[modvar]
         else: # stop having to add ones to varMult dict when no multiplication necessary
-            try:
-                mod_val=f1.variables[modvar][:,0,...]
-            except:
-                mod_val=f2.variables[modvar][:,0,...]
-    elif modvar in ('o2os','talkos','no3os','AOUos','dissicos'):
-        SA=gsw.SA_from_SP(f1.variables['sos'][:,0,0],0,lon,lat)
-        CT=gsw.CT_from_t(SA,f1.variables['tos'][:,0,0],0)
+            mod_val=f1.variables[modvar][:]
+    elif modvar in ('o2os','talkos','no3os','dissicos'):
+        SA=gsw.SA_from_SP(f1.variables['sos'][:],0,lon,lat)
+        CT=gsw.CT_from_t(SA,f1.variables['tos'][:],0)
         rho=gsw.rho(SA,CT,0) #kg/m3
         if modvar=='o2os':
-            omod=f1.variables['o2os'][:,0,0]
+            omod=f1.variables['o2os'][:]
             # DO: # mol/m3 -> umol/kg:   mol/m3/(rho kg/m3)*1e6 = umol/kg
             mod_val=omod/rho*1e6
         elif modvar=='talkos':
-            omod=f1.variables['talkos'][:,0,0] # mol m-3
+            omod=f1.variables['talkos'][:] # mol m-3
             mod_val=omod/rho*1e6 # mol m-3 -> umol/kg
         elif modvar=='dissicos':
-            omod=f1.variables['dissicos'][:,0,0] # mol m-3
+            omod=f1.variables['dissicos'][:] # mol m-3
             mod_val=omod/rho*1e6 # mol m-3 -> umol/kg
         elif modvar=='no3os':
-            omod=f1.variables['no3os'][:,0,0] # mol m-3
+            omod=f1.variables['no3os'][:] # mol m-3
             mod_val=omod/rho*1e6 # mol m-3 -> umol/kg
-        elif modvar=='AOUos':
-            omod=f1.variables['o2satos'][:,0,0]-f1.variables['o2os'][:,0,0]
-            mod_val=omod/rho*1e6
+    elif modvar=='AOUos':
+        o2sat=gsw.O2sol_SP_pt(f1.variables['sos'][:],f1.variables['tos'][:]) # S is psu, T is pt, umol/kg
+        SA=gsw.SA_from_SP(f1.variables['sos'][:],0,lon,lat)
+        CT=gsw.CT_from_t(SA,f1.variables['tos'][:],0)
+        rho=gsw.rho(SA,CT,0) #kg/m3
+        omod=f1.variables['o2os'][:]
+        # DO: # mol/m3 -> umol/kg:   mol/m3/(rho kg/m3)*1e6 = umol/kg
+        mod_val=o2sat-omod/rho*1e6
     elif modvar=='o2percos':
-        mod_val=f1.variables['o2os'][:,0,0]/f1.variables['o2satos'][:,0,0]*100
-    elif modvar=='co2dryair':
-        # convert from moist to dry using conversion from model code:
-        # co2(:,:,:) * ((WTMAIR/WTMCO2) / (1.0-sphum(:,:,:)))
-        # but co2s has alread been multiplied by WTMAIR/WTMCO2*1e6
-        mod_val=f2.variables['co2s'][:,0,0]/(1-f2.variables['huss'][:,0,0])
-    elif modvar=='apco2':
-        # calculate air side from dpco2 and spco2, then convert units:
-        try:
-            spco2=f1.variables['spco2'][:,0,...]*varMult['spco2']
-        except:
-            spco2=f2.variables['spco2'][:,0,...]*varMult['spco2']
-        try:
-            dpco2=f1.variables['dpco2'][:,0,...]*varMult['dpco2']
-        except:
-            dpco2=f2.variables['dpco2'][:,0,...]*varMult['dpco2']
-        mod_val=spco2-dpco2 # conversion to uatm already done
+        mod_val=f1.variables['o2os'][:]/f1.variables['o2satos'][:]*100
     elif modvar=='l10chlos':
         omodvar='chlos'
-        try:
-            mod_val=f1.variables[omodvar][:,0,...]*varMult[omodvar]
-        except:
-            mod_val=f2.variables[omodvar][:,0,...]*varMult[omodvar]
+        mod_val=f1.variables[omodvar][:]*varMult[omodvar]
         mod_val=np.log10(mod_val)
     elif modvar=='hplusos':
-        mod_val=1e6*10**(-1*f1.variables['phos'][:,0,...])*varMult[modvar]
+        mod_val=1e6*10**(-1*f1.variables['phos'][:])*varMult[modvar]
     elif modvar.startswith('omega_a_') or modvar.startswith('omega_c_'): # format omega_a/c_depth
         try:
             satvar='co3satarag' if modvar.startswith('omega_a_') else 'co3satcalc'
@@ -328,7 +309,7 @@ def makeSlopesList(icomp):
         itind=icomp.mod_tind[stencil]
     return fitlist
 
-def compileStats(save=True,path=None,vlist=None):
+def compileStats(save=True,path=None,vlist=None,freq='daily'):
     if path is None:
         path=compsaveloc
     if vlist is None:
@@ -341,7 +322,7 @@ def compileStats(save=True,path=None,vlist=None):
         for mvar in vlist:
             print(mvar)
             try:
-                mm=loadMoorComp(dsid,mvar,path=path)
+                mm=loadMoorComp(dsid,mvar,freq=freq,path=path)
                 statsdf.append(mm.statsSummary())
             except FileNotFoundError:
                 print('no file')
@@ -355,7 +336,8 @@ def compileStats(save=True,path=None,vlist=None):
             os.remove(path+'statsdfsMerged.pkl')
     return statsdf
 
-def loadStats(merged=False,path=None):
+def loadStats(merged=False,path=None,vlist=None):
+    print(path)
     if path is None:
         path=compsaveloc
     if merged:
@@ -451,13 +433,13 @@ def run1Comp(ind):
     locName,shortName=dfInfoBuoy.loc[dfInfoBuoy.datasetID==dsid,['title','shortTitle']].values[0]
     print(dsid,locName)
     [lat,lon], ldict, udict, df0, df = OAP.loadOAPBuoy(dfInfoBuoy,dsid,freq='daily')
-    with nc.Dataset(OAP.modpath(dsid)) as f1, nc.Dataset(OAP.modpath(dsid,'288grid')) as f2:
+    with nc.Dataset(OAP.modpath(dsid)) as f1:#, nc.Dataset(OAP.modpath(dsid,'288grid')) as f2:
         for mvar in vproclist:
             print(mvar)
             try:
                 mmm=ev.timeSeriesComp(mvar,dsid,locName,shortName,lat,lon,
                         obsloadfun=obsload,obsloadkwargs={'df':df},
-                        modloadfun=modload,modloadkwargs={'f1':f1,'f2':f2,'lon':lon,'lat':lat,'freq':'daily'},
+                        modloadfun=modload,modloadkwargs={'f1':f1,'f2':None,'lon':lon,'lat':lat,'freq':'daily'},
                         freq='daily',savepath=savebase,figsavepath=figsaveloc,compsavepath=compsaveloc)
                 if mvar in ['co2dryair','apco2']:
                     mmm.calc_fits(fitlist=['quadfit','optfit','linfit1'],fitlistOL=['linfit1'],
@@ -587,34 +569,27 @@ def run1CompScen(dsid,scen,freq,saveLoc,dfInfoBuoy=None):
     else:
         f1path=diagsPP.searchExtracted(scen,dsid)
         compPath=saveLoc+'comps/'
-    with nc.Dataset(f1path) as f1, nc.Dataset(diagsPP.searchExtracted(scen,dsid,'288grid')) as f2:
+    with nc.Dataset(f1path) as f1:#, nc.Dataset(diagsPP.searchExtracted(scen,dsid,'288grid')) as f2:
         for mvar in vproclistB:#'no3os',]:#[*vproclist,*vproclistM]:
             print(mvar)
             try:
-                if diagsPP.scenNameDict[scen]=='GFDL-ESM4.1.1975_2022':
-                    print('GFDL-ESM4.1.1975_2022')
-                    try:
-                        [lat,lon], ldict, udict, df0, df = OAP.loadOAPBuoy(dfInfoBuoy,dsid,freq)
-                        mmm=ev.timeSeriesComp(mvar,dsid,locName,shortName,lat,lon,
-                                obsloadfun=obsload,obsloadkwargs={'df':df},
-                                modloadfun=modload,modloadkwargs={'f1':f1,'f2':f2,'lon':lon,'lat':lat,'freq':freq},
-                                freq=freq,savepath=saveLoc,figsavepath=saveLoc+'figs/',compsavepath=compPath)
-                    except ObsError:
-                        mmm=ev.timeSeriesComp(mvar,dsid,locName,shortName,lat,lon,
-                                obsloadfun=obsloadNull,obsloadkwargs={},
-                                modloadfun=modload,modloadkwargs={'f1':f1,'f2':f2,'lon':lon,'lat':lat,'freq':freq},
-                                freq=freq,savepath=saveLoc,figsavepath=saveLoc+'figs/',compsavepath=compPath)
-                else:
+                try:
+                    [lat,lon], ldict, udict, df0, df = OAP.loadOAPBuoy(dfInfoBuoy,dsid,freq)
+                    mmm=ev.timeSeriesComp(mvar,dsid,locName,shortName,lat,lon,
+                            obsloadfun=obsload,obsloadkwargs={'df':df},
+                            modloadfun=modload,modloadkwargs={'f1':f1,'f2':None,'lon':lon,'lat':lat,'freq':freq},
+                            freq=freq,savepath=saveLoc,figsavepath=saveLoc+'figs/',compsavepath=compPath)
+                except ObsError:
                     mmm=ev.timeSeriesComp(mvar,dsid,locName,shortName,lat,lon,
                             obsloadfun=obsloadNull,obsloadkwargs={},
-                            modloadfun=modload,modloadkwargs={'f1':f1,'f2':f2,'lon':lon,'lat':lat,'freq':freq},
+                            modloadfun=modload,modloadkwargs={'f1':f1,'f2':None,'lon':lon,'lat':lat,'freq':freq},
                             freq=freq,savepath=saveLoc,figsavepath=saveLoc+'figs/',compsavepath=compPath)
                 print(len(mmm.obs_val))
                 if mvar in ['co2dryair','apco2']:
-                    mmm.calc_fits(fitlist=['quadfit','optfit','linfit1'],fitlistOL=['linfit1'],
+                    mmm.calc_fits(fitlist=['quadfit','linfit1'],fitlistOL=['linfit1'],
                                      defaultfit='quadfit',predefined={'obs_b2':'mod_b2'})
                 else:
-                    mmm.calc_fits()
+                    mmm.calc_fits(fitlist=['linfit1',],fitlistOL=['linfit1',],defaultfit='linfit1')
                 #mmm.calc_fits()
                 print(len(mmm.obs_val))
                 mmm.calc_stats()
@@ -632,9 +607,9 @@ if __name__=="__main__":
     if sys.argv[1]=='run1CompScen':
         import diagsPP 
         ind=int(sys.argv[2])
-        scenInd=int(sys.argv[3])
-        print(f"run1CompScen: ind={ind},scenInd={scenInd}")
-        iscen,yrspan = diagsPP.listScenDates[scenInd]
+        iscen=sys.argv[3]
+        print(f"run1CompScen: ind={ind},scen={iscen}")
+        yrspan = diagsPP.dictScenDates[iscen]
         freq='daily' 
         dfInfoBuoy=OAP.loadOAPInfo(modelgrid=True)
         dsid=dfInfoBuoy.datasetID[ind]
@@ -645,10 +620,28 @@ if __name__=="__main__":
         #vproclist=['phosC', 'omega_a_0', 'omega_c_0', 'dissicos']
         #vproclist=['dissicos','apco2']
         #vproclist=['co2dryair','apco2']
-        vproclistB=['omega_a_P_0']
+        vproclistB=['tos','sos']
         vproclistM=[]
         run1CompScen(dsid,iscen,freq,saveloc,dfInfoBuoy)
-    
+    elif sys.argv[1]=='run1CompScenM':
+        import diagsPP 
+        ind=int(sys.argv[2])
+        iscen=sys.argv[3]
+        print(f"run1CompScen: ind={ind},scen={iscen}")
+        yrspan = diagsPP.dictScenDates[iscen]
+        freq='monthly' 
+        dfInfoBuoy=OAP.loadOAPInfo(modelgrid=True)
+        dsid=dfInfoBuoy.datasetID[ind]
+        saveloc=savebase + f"{diagsPP.scenNameDict[iscen]}/"
+        cf.mkdirs(saveloc)
+        print(dsid,iscen,freq)
+        #vproclist=['o2percos','AOUos']
+        #vproclist=['phosC', 'omega_a_0', 'omega_c_0', 'dissicos']
+        #vproclist=['dissicos','apco2']
+        #vproclist=['co2dryair','apco2']
+        vproclistB=['tos','sos','chlos','spco2','o2os','AOUos']
+        vproclistM=[]
+        run1CompScen(dsid,iscen,freq,saveloc,dfInfoBuoy)
     elif sys.argv[1]=='run1CompScenHD':
         import diagsPP 
         ind=int(sys.argv[2])

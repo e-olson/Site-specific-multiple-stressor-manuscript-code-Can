@@ -48,7 +48,6 @@ dependencies:
    - dask_labextension
 # conda env create --prefix /nbhome/Elise.Olson/anaconda3/envs/py39dc -f py39dc.yml
 # conda activate py39dc
-# jupyter labextension install dask-labextension
 # cd /home/Elise.Olson/OAPMSE/analysis/Tools
 # conda develop .
 # cd /nbhome/ebo/mocsy

@@ -1,0 +1,297 @@
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/home/ords/crd/ccrn/reo000/miniconda3/envs/py39dc2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ords/crd/ccrn/reo000/miniconda3/envs/py39dc2/lib/python3.9/site-packages/numpy/core/_methods.py:194: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret / rcount
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/home/ords/crd/ccrn/reo000/miniconda3/envs/py39dc2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ords/crd/ccrn/reo000/miniconda3/envs/py39dc2/lib/python3.9/site-packages/numpy/core/_methods.py:194: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret / rcount
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanmean at 0x14bdd5f22430> is currently using SeriesGroupBy.mean. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "mean" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/OAPBuoyData.py:291: FutureWarning: The provided callable <function nanstd at 0x14bdd5f25040> is currently using SeriesGroupBy.std. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string "std" instead.
+  df=df0.groupby(['timeind']).agg(agdic).reset_index()
+/home/ords/crd/ccrn/reo000/miniconda3/envs/py39dc2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ords/crd/ccrn/reo000/miniconda3/envs/py39dc2/lib/python3.9/site-packages/numpy/core/_methods.py:194: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret / rcount
+run1CompScen: ind=38,scen=CanESM51_1975_2022_monthly
+pmel_co2_moorings_509b_0e87_dbc3 CanESM51_1975_2022_monthly monthly
+pmel_co2_moorings_509b_0e87_dbc3 TAO140W  NOAA Surface Ocean CO2 and Ocean Acidification Mooring Time Series /space/hall5/sitestore/eccc/crd/ccrn/users/reo000/work/CanESM51_1975_2022_monthly/
+tos
+129
+129
+129
+Pickling, removing cf time classes: ['obs_tind', 'obs_tind_b', 'mod_tind', 'mod_intt', 'obs_intt']
+sos
+115
+115
+115
+Pickling, removing cf time classes: ['obs_tind', 'obs_tind_b', 'mod_tind', 'mod_intt', 'obs_intt']
+chlos
+1
+1
+1
+Pickling, removing cf time classes: ['obs_tind', 'obs_tind_b', 'mod_tind', 'mod_intt', 'obs_intt']
+spco2
+95
+95
+95
+Pickling, removing cf time classes: ['obs_tind', 'obs_tind_b', 'mod_tind', 'mod_intt', 'obs_intt']
+o2os
+1
+1
+1
+Pickling, removing cf time classes: ['obs_tind', 'obs_tind_b', 'mod_tind', 'mod_intt', 'obs_intt']
+AOUos
+1
+1
+1
+Pickling, removing cf time classes: ['obs_tind', 'obs_tind_b', 'mod_tind', 'mod_intt', 'obs_intt']

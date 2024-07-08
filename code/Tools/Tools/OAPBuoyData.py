@@ -1,4 +1,4 @@
-import socket
+#import socket
 import os
 import glob
 # import re
@@ -13,15 +13,15 @@ import cartopy.crs as ccrs
 # import cartopy
 import PyCO2SYS as pyco2
 import warnings
-from Tools import viz, commonfxns as cf, diagsPP, AlkFits, ccfxns as cc
+import viz, commonfxns as cf, diagsPP, AlkFits, ccfxns as cc
 
 # note: xarray failed to load ERDDAP nc files from this site
 # path for info table on ERDDAP:
 #url3='https://data.pmel.noaa.gov/pmel/erddap/tabledap/allDatasets.csv?datasetID' 
-urlInfo='https://data.pmel.noaa.gov/pmel/erddap/tabledap/allDatasets.csv?'+\
-        'datasetID%2Ctitle%2CminLongitude%2CmaxLongitude%2CminLatitude%2CmaxLatitude%2CminTime%2CmaxTime'
+# urlInfo='https://data.pmel.noaa.gov/pmel/erddap/tabledap/allDatasets.csv?'+\
+#         'datasetID%2Ctitle%2CminLongitude%2CmaxLongitude%2CminLatitude%2CmaxLatitude%2CminTime%2CmaxTime'
 # start of path for actual data sets on ERDDAP:
-erdstr0='https://data.pmel.noaa.gov/pmel/erddap/tabledap/'
+# erdstr0='https://data.pmel.noaa.gov/pmel/erddap/tabledap/'
 
 # define regions, almost all based on Sutton et al 2019
 regions={
@@ -66,40 +66,40 @@ regions={
     'TAO140W':'Equatorial Pacific Ocean', 
     'TAO125W':'Equatorial Pacific Ocean',
     'TAO110W':'Equatorial Pacific Ocean'}
-
-if 'stellar' in socket.gethostname():
-    localPath='/scratch/gpfs/eo2651/obs/OAPBuoys/'
-    calcsPath='/scratch/cimes/eo2651/calcs/extracted_OAPBuoy/'
-else:
-    # localPath='/net2/Elise.Olson/obs/OAPBuoys/'
-    # if not os.path.exists(localPath):
-    #     localPath='/work/Elise.Olson/obs/OAPBuoys/' # /net2 not accessible from PP nodes 
-    localPath='/work/Elise.Olson/obs/OAPBuoys/' # /net2 not accessible from PP nodes 
-    calcsPath='/work/Elise.Olson/calcs/extracted_OAPBuoy/'
+localPath='/space/hall5/sitestore/eccc/crd/ccrn/users/reo000/data/obs/OAPBuoy/'
+# if 'stellar' in socket.gethostname():
+#     localPath='/scratch/gpfs/eo2651/obs/OAPBuoys/'
+#     calcsPath='/scratch/cimes/eo2651/calcs/extracted_OAPBuoy/'
+# else:
+#     # localPath='/net2/Elise.Olson/obs/OAPBuoys/'
+#     # if not os.path.exists(localPath):
+#     #     localPath='/work/Elise.Olson/obs/OAPBuoys/' # /net2 not accessible from PP nodes 
+#     localPath='/work/Elise.Olson/obs/OAPBuoys/' # /net2 not accessible from PP nodes 
+#     calcsPath='/work/Elise.Olson/calcs/extracted_OAPBuoy/'
 
 def loadOAPInfo(modelgrid=False,modMeans=False):
-    if modMeans:
-        t2=xr.open_dataset(calcsPath+'dfInfoBuoyWithModMeans.nc')
-        dfInfoBuoy=t2.to_dataframe()
-        dfInfoBuoy.index.name = None
-        t2.close()
-    else:
-        dfInfoBuoy=pd.read_csv(localPath+'dfInfoBuoy.csv',index_col=0)
-        if modelgrid:
-            mask1x1=np.ceil(viz.wet1x1)
-            dfInfoBuoy['jj'],dfInfoBuoy['ii']=cf.nearest_valid_point(dfInfoBuoy['Lat'],dfInfoBuoy['Lon'],
-                                                                  viz.glat1x1,viz.glon1x1,mask1x1,thresh=180)
-            dfInfoBuoy['Lat1x1']=[viz.glat1x1[jj,ii] for jj, ii in dfInfoBuoy[['jj','ii']].values]
-            dfInfoBuoy['Lon1x1']=[viz.glon1x1[jj,ii] for jj, ii in dfInfoBuoy[['jj','ii']].values]
-            # choose atmos grid point according to location of ocean grid point rather than original data location
-            # mask not necessary
-            dfInfoBuoy['jj288'],dfInfoBuoy['ii288']=cf.nearest_point(dfInfoBuoy['Lat1x1'],dfInfoBuoy['Lon1x1'],
-                                                                     viz.glat288,viz.glon288,thresh=100,tol=2)
-            dfInfoBuoy['jjHD'],dfInfoBuoy['iiHD']=cf.nearest_valid_point(dfInfoBuoy['Lat1x1'],dfInfoBuoy['Lon1x1'],
-                                                                    viz.glatHD,viz.glonHD,viz.wetHD) # defaults are for half degree grid
-            dfInfoBuoy['modBathy']=[viz.deptho1x1[jj,ii] for jj, ii in dfInfoBuoy[['jj','ii']].values]
-            dfInfoBuoy['modBathyHD']=[viz.depthoHD[jj,ii] for jj, ii in dfInfoBuoy[['jjHD','iiHD']].values]
-        dfInfoBuoy['shortTitle']=[el.split(' NOAA Surface Ocean CO2 and Ocean Acidification Mooring Time Series')[0] for el in dfInfoBuoy['title']]
+    # if modMeans:
+    #     t2=xr.open_dataset(calcsPath+'dfInfoBuoyWithModMeans.nc')
+    #     dfInfoBuoy=t2.to_dataframe()
+    #     dfInfoBuoy.index.name = None
+    #     t2.close()
+    # else:
+    dfInfoBuoy=pd.read_csv('dfInfoBuoy.csv',index_col=0)
+    if modelgrid:
+        mask1x1=np.ceil(viz.wet1x1)
+        dfInfoBuoy['jj'],dfInfoBuoy['ii']=cf.nearest_valid_point(dfInfoBuoy['Lat'],dfInfoBuoy['Lon'],
+                                                              viz.glat1x1,viz.glon1x1,mask1x1,thresh=180)#just use HD
+        dfInfoBuoy['Lat1x1']=[viz.glat1x1[jj,ii] for jj, ii in dfInfoBuoy[['jj','ii']].values]
+        dfInfoBuoy['Lon1x1']=[viz.glon1x1[jj,ii] for jj, ii in dfInfoBuoy[['jj','ii']].values]
+        # choose atmos grid point according to location of ocean grid point rather than original data location
+        # mask not necessary
+        # dfInfoBuoy['jj288'],dfInfoBuoy['ii288']=cf.nearest_point(dfInfoBuoy['Lat1x1'],dfInfoBuoy['Lon1x1'],
+        #                                                          viz.glat288,viz.glon288,thresh=100,tol=2)
+        dfInfoBuoy['jjHD'],dfInfoBuoy['iiHD']=cf.nearest_valid_point(dfInfoBuoy['Lat1x1'],dfInfoBuoy['Lon1x1'],
+                                                                viz.glat1x1,viz.glon1x1,viz.wet1x1) # defaults are for half degree grid
+        dfInfoBuoy['modBathy']=[viz.deptho1x1[jj,ii] for jj, ii in dfInfoBuoy[['jj','ii']].values]
+        dfInfoBuoy['modBathyHD']=[viz.deptho1x1[jj,ii] for jj, ii in dfInfoBuoy[['jjHD','iiHD']].values]
+    dfInfoBuoy['shortTitle']=[el.split(' NOAA Surface Ocean CO2 and Ocean Acidification Mooring Time Series')[0] for el in dfInfoBuoy['title']]
     return dfInfoBuoy
 
 #def slidingstdthreshold(val, window, nstdev_thresh=3):
