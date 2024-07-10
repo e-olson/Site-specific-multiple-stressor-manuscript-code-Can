@@ -15,7 +15,7 @@ import pickle
 import os
 import warnings
 
-vlist0=['tos','sos','spco2','chlos','o2os',]
+vlist0=['tos','sos','spco2','chlos','o2os','AOUos']
 def loadDetrendAnomObs(icomp,deseas=False):
     # get data, detrend, and subtract mean
     otdt=icomp.obs_tdt
