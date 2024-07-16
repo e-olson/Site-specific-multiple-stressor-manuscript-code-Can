@@ -1,7 +1,7 @@
 import numpy as np
 import warnings
 
-bxfbase='/space/hall5/sitestore/eccc/crd/ccrn/users/reo000/work/CanESM51_1975_2022/bxfs/'
+bxfbase='/space/hall5/sitestore/eccc/crd/ccrn/users/reo000/work/CanESM5CanOE_1975_2022/bxfs/'
 optstr={None:'',
         'equiv':'.equiv',
         'HDgrid':'.HDgrid',}

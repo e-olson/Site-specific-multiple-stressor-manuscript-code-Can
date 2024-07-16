@@ -1,0 +1,16 @@
+## Run saveFreqBandsM.py
+#PBS -l nodes=1:ppn=1
+#PBS -l mem=1GB
+#PBS -l walltime=06:00:00
+#PBS -S /bin/bash
+#PBS -N comps21_30
+#PBS -o comps21_30_out.txt
+#PBS -e comps21_30_err.txt
+
+
+source /home/reo000/myconda
+conda activate py39dc2
+
+cd /home/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools
+for i in {21..30}; do `python OAPBuoyComp.py run1CompScenM $i CanESM5CanOE_1975_2022_monthly` ; done
+echo 'done'

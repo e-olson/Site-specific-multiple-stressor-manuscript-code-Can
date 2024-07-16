@@ -163,12 +163,14 @@ listScenDates = [('ESM4_historical_D1',[1975,2014]), #0
             (('ESM4_1pctCO2_D1_peak','ESM4_1pctCO2-cdr_D1_peak'),[121,140,141,160]), #13
             ('ESM4_1pctCO2-cdr_D1_end',[241,280]), #14
                  ('CanESM51_1975_2022',[1975,2022]),
-                 ('CanESM51_1975_2022_monthly',[1975,2022])]
+                 ('CanESM51_1975_2022_monthly',[1975,2022]),
+                 ('CanESM5CanOE_1975_2022_monthly',[1975,2022])]
 dictScenDates=dict(listScenDates)
 dictScenDates['GFDL-ESM4.1.1975_2022']=dictScenDates[('ESM4_historical_D1','ESM4_ssp245_D1_histCont')] # handle alias
 
 scenNameDict={'CanESM51_1975_2022':'CanESM51_1975_2022',
               'CanESM51_1975_2022_monthly':'CanESM51_1975_2022_monthly',
+              'CanESM5CanOE_1975_2022_monthly':'CanESM5CanOE_1975_2022_monthly',
               ('ESM4_historical_D1','ESM4_ssp245_D1_histCont'):'1975_2022',
               ('ESM4_1pctCO2_D1_peak','ESM4_1pctCO2-cdr_D1_peak'):'1pctCO2peak',
                'GFDL-ESM4.1.1975_2022':'GFDL-ESM4.1.1975_2022',

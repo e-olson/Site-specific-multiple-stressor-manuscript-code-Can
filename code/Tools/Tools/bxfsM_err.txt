@@ -310,3 +310,4 @@
   vvar={'obs':_varcalc(bando3)+[np.nanvar(icomp.obs_target).astype(float) \
 /fs/homeu2/eccc/crd/ccrn_shr/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools/saveFreqBandsM.py:83: RuntimeWarning: Degrees of freedom <= 0 for slice.
   'obs_ds':_varcalc(banddso3)+[np.nanvar(icomp.obs_targetdeseas.astype(float)) \
+cleaning up temporary directories

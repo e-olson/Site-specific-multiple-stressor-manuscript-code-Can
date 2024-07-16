@@ -230,8 +230,10 @@ def calcbands(Tvec=[13,],freq='monthly',cpath='/space/hall5/sitestore/eccc/crd/c
 if __name__=="__main__":
     print('starting calcs')
     # first rerun compile stats:
-    bc.compileStats(save=True,path='/space/hall5/sitestore/eccc/crd/ccrn/users/reo000/work/CanESM51_1975_2022_monthly/comps/',vlist=vlist0,freq='monthly')
-    calcbands(cpath='/space/hall5/sitestore/eccc/crd/ccrn/users/reo000/work/CanESM51_1975_2022_monthly/comps/')
+    #bc.compileStats(save=True,path='/space/hall5/sitestore/eccc/crd/ccrn/users/reo000/work/CanESM51_1975_2022_monthly/comps/',vlist=vlist0,freq='monthly')
+    #calcbands(cpath='/space/hall5/sitestore/eccc/crd/ccrn/users/reo000/work/CanESM51_1975_2022_monthly/comps/')
+    bc.compileStats(save=True,path='/space/hall5/sitestore/eccc/crd/ccrn/users/reo000/work/CanESM5CanOE_1975_2022_monthly/comps/',vlist=vlist0,freq='monthly')
+    calcbands(cpath='/space/hall5/sitestore/eccc/crd/ccrn/users/reo000/work/CanESM5CanOE_1975_2022_monthly/comps/')
 
     # # equiv option:
     # calcbands(opt='equiv');#cpath='/work/ebo/calcs/buoyCompTS/GFDL-ESM4.1.1975_2022/comps/');
