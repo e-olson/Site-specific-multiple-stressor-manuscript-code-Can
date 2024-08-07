@@ -10,6 +10,7 @@ import pandas as pd
 import scipy.optimize as scopt
 import commonfxns as cf, OAPBuoyData as OAP, evalfxns as ev, viz, diagsPP, conversions
 import netCDF4 as nc
+import xarray as xr
 import cftime
 import datetime as dt
 # import cmocean
@@ -603,6 +604,68 @@ def run1CompScen(dsid,scen,freq,saveLoc,dfInfoBuoy=None):
                 print(f'Failed:({dsid},{mvar})')
     return
 
+def run1CompScenSat(dsid,scen,freq,saveLoc,dfInfoBuoy=None):
+    compPath=saveLoc+'compsSat/'
+    if dfInfoBuoy is None:
+        dfInfoBuoy=OAP.loadOAPInfo(modelgrid=True)
+    locName,shortName,lat,lon=dfInfoBuoy.loc[dfInfoBuoy.datasetID==dsid,['title',
+                                                            'shortTitle','Lat','Lon']].values[0]
+    if not freq=='monthly':
+        raise Exception('only monthly data currently available')
+    else:
+        def _obsloadchl(modvar='chlos'):
+            if not modvar=='chlos':
+                raise ObsError('Only chlos available in this file.')
+            pathch='/space/hall5/sitestore/eccc/crd/ccrn/users/rpg002/data/chlos/observations/ESACCI/raw/raw/'
+            fch0=sorted(os.listdir(pathch))
+            with xr.open_mfdataset([os.path.join(pathch,el) for el in fch0]) as fch:
+                obsdtUTC=np.array([dt.datetime(1900,1,1)+dt.timedelta(seconds=(el-np.datetime64('1900-01-01')).astype(int)*1e-9) for el in fch['time'].values])
+                data0=fch['chlor_a'].sel(lat=lat,lon=lon,method='nearest').values
+            tref=dt.datetime(1975,1,1,0,0) # use start of model sections for consistency (alt: obsdtUTC[0])
+            ii1=~pd.isnull(data0)
+            if np.sum(ii1)<3:
+                raise ObsError('Not enough valid data')
+            obs_val=np.squeeze(data0[ii1])
+            obs_tdt=np.squeeze(obsdtUTC[ii1])
+            
+            return obs_tdt, obs_val, dispName[modvar], dispUnits[modvar], dispNameUnits[modvar], 'chlor_a'
+    
+    print(dsid,locName,saveLoc)
+    f1path=diagsPP.searchExtracted(scen,dsid)
+    compPath=saveLoc+'comps/'
+    with nc.Dataset(f1path) as f1:#, nc.Dataset(diagsPP.searchExtracted(scen,dsid,'288grid')) as f2:
+        for mvar in ['chlos',]:#'no3os',]:#[*vproclist,*vproclistM]:
+            print(mvar)
+            try:
+                try:
+                    mmm=ev.timeSeriesComp(mvar,dsid,locName,shortName,lat,lon,
+                            obsloadfun=_obsloadchl,obsloadkwargs={},
+                            modloadfun=modload,modloadkwargs={'f1':f1,'f2':None,'lon':lon,'lat':lat,'freq':freq},
+                            freq=freq,savepath=saveLoc,figsavepath=saveLoc+'figs/',compsavepath=compPath)
+                except ObsError:
+                    mmm=ev.timeSeriesComp(mvar,dsid,locName,shortName,lat,lon,
+                            obsloadfun=obsloadNull,obsloadkwargs={},
+                            modloadfun=modload,modloadkwargs={'f1':f1,'f2':None,'lon':lon,'lat':lat,'freq':freq},
+                            freq=freq,savepath=saveLoc,figsavepath=saveLoc+'figs/',compsavepath=compPath)
+                print(len(mmm.obs_val))
+                if mvar in ['co2dryair','apco2']:
+                    mmm.calc_fits(fitlist=['quadfit','linfit1'],fitlistOL=['linfit1'],
+                                     defaultfit='quadfit',predefined={'obs_b2':'mod_b2'})
+                else:
+                    mmm.calc_fits(fitlist=['linfit1',],fitlistOL=['linfit1',],defaultfit='linfit1')
+                #mmm.calc_fits()
+                print(len(mmm.obs_val))
+                mmm.calc_stats()
+                print(len(mmm.obs_val))
+                mmm.topickle()
+            except ObsError as err:
+                print('ObsError:',err.value)
+                print(f'Failed:({dsid},{mvar})')
+            except ModError as err:
+                print('ModError:',err.value)
+                print(f'Failed:({dsid},{mvar})')
+    return
+
 if __name__=="__main__":
     if sys.argv[1]=='run1CompScen':
         import diagsPP 
@@ -642,6 +705,19 @@ if __name__=="__main__":
         vproclistB=['tos','sos','chlos','spco2','o2os','AOUos']
         vproclistM=[]
         run1CompScen(dsid,iscen,freq,saveloc,dfInfoBuoy)
+    elif sys.argv[1]=='run1CompScenMSat':
+        import diagsPP 
+        ind=int(sys.argv[2])
+        iscen=sys.argv[3] # CanESM5CanOE_1975_2022_monthly
+        print(f"run1CompScen: ind={ind},scen={iscen}")
+        yrspan = diagsPP.dictScenDates[iscen]
+        freq='monthly' 
+        dfInfoBuoy=OAP.loadOAPInfo(modelgrid=True)
+        dsid=dfInfoBuoy.datasetID[ind]
+        saveloc=savebase + f"{diagsPP.scenNameDict[iscen]}/"
+        cf.mkdirs(saveloc)
+        print(dsid,iscen,freq)
+        run1CompScenSat(dsid,iscen,freq,saveloc,dfInfoBuoy)
     elif sys.argv[1]=='run1CompScenHD':
         import diagsPP 
         ind=int(sys.argv[2])

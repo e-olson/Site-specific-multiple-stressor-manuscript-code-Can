@@ -227,7 +227,7 @@ def loadOAPBuoy(dfInfoBuoy,buoyID,freq='daily',filtSSS=True,cCalcs=True):
     lat,lon,dsid,shortTitle=dfInfoBuoy.loc[iB,['Lat','Lon','datasetID','shortTitle']].values[0]
     with nc.Dataset(localPath+'ncfiles/'+dfInfoBuoy.loc[iB,['datasetID']].values[0][0]+'.nc') as f:
         torigNC=dt.datetime.strptime(f.variables['time'].time_origin,'%d-%b-%Y %H:%M:%S')
-        obsdtUTC=np.array([torigNC+dt.timedelta(seconds=ii) for ii in f.variables['time'][:]])
+        obsdtUTC=np.array([dt.datetime(1900,1,1)+dt.timedelta(seconds=(el-np.datetime64('1900-01-01')).astype(int)*1e-9) for el in fch['time'].values])
         tref=dt.datetime(1975,1,1,0,0) # use start of model sections for consistency (alt: obsdtUTC[0])
         timeind=cf.to_int_tind(obsdtUTC,freq=freq,torig=tref)
         exday=cf.to_exact_tind(obsdtUTC,torig=tref)

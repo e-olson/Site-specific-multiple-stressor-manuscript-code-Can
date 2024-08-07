@@ -12,5 +12,5 @@ source /home/reo000/myconda
 conda activate py39dc2
 
 cd /home/reo000/MSME/Site-specific-multiple-stressor-manuscript-code-Can/code/Tools/Tools
-for i in {11..20}; do `python OAPBuoyComp.py run1CompScenM $i CanESM5CanOE_1975_2022_monthly` ; done
+for i in {11..20}; do `python OAPBuoyComp.py run1CompScenMSat $i CanESM5CanOE_1975_2022_monthly` ; done
 echo 'done'
